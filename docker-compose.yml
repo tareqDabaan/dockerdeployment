@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  web2:
+    build: .
+    command: python dockerproject/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/railway
+    ports:
+      - "8000:8000"
